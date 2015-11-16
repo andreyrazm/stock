@@ -2,9 +2,9 @@
 
 Style/Encoding:
   Enabled: false
-#
-#ClassAndModuleChildren:
-#  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
 
 Metrics/LineLength:
   Max: 150
