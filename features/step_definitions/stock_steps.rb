@@ -67,3 +67,7 @@ Then(/^I must see the already calculated data$/) do
   page.should have_selector('.shares-table')
   page.should have_selector('.highcharts-container')
 end
+
+Given /^the web applications runs on (.*?)$/ do |name|
+  puts Capybara.current_session.server.host
+end
