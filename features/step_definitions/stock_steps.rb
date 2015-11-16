@@ -69,5 +69,5 @@ Then(/^I must see the already calculated data$/) do
 end
 
 Given /^the web applications runs on (.*?)$/ do |name|
-  puts Capybara.current_session.server.host
+  puts Socket.gethostname
 end
