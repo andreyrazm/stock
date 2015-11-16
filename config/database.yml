@@ -94,7 +94,7 @@ production:
   <<: *default
   database: stock_production
   username: stock
-  password: <%= ENV['STOCK_DATABASE_PASSWORD'] %>
+  password: password1
 
 cucumber:
   <<: *test
