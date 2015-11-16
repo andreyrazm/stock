@@ -57,7 +57,7 @@ Feature: Calculate stock productivity
 
   @javascript
   Scenario: View exisiting calculations
-    Given the web applications runs on Heroku
+#    Given the web applications runs on Heroku
     Given the system has already calculated stocks
       | name         | price  | quantity | percentage | years |
       | Apple        | 172.00 | 10       | 5.00       | 10    |
