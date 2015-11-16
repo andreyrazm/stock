@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+
+
+
+$main-color: #1E7B12;
+
+@mixin rounded-corners($radius) {
+  border-radius: $radius !important;
+  -moz-border-radius: $radius !important;
+  -webkit-border-radius: $radius !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+  font-family: verdana;
+  font-size: 14px;
+}
+
+
+#header {
+  background-color: $main-color;
+  color: #FFF;
+  padding: 4px 100px;
+  border-bottom: solid 5px darken($main-color, 10%);
+
+}
+
+a {
+  color: $main-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#container {
+  margin: 0 100px;
+  h1{
+    margin-bottom: 40px;
+  }
+}
+
+table {
+
+  th {
+    background-color: lighten($main-color, 50%);
+  }
+}
+
+
+input {
+  &[type="submit"] {
+    @extend .btn;
+    @extend .btn-success;
+  }
+  &[type="text"] {
+    @extend .form-control;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+}
+

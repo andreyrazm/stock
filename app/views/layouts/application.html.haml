@@ -1,0 +1,25 @@
+%html
+  %head
+    %title Stock productivity calculator
+    = stylesheet_link_tag :application, :media => "all"
+    = javascript_include_tag :application
+    = csrf_meta_tags
+
+  %body
+    #header
+      %h1
+        Stock productivity calculator
+        =link_to root_path, style: 'float:right; color:white' do
+          %i.glyphicon.glyphicon-home
+
+
+    #container
+
+      - if notice
+        .alert.alert-success=  notice
+      - if alert
+        .alert.alert-danger=  alert
+      = yield
+
+
+

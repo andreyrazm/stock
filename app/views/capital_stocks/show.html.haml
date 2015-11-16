@@ -1,0 +1,39 @@
+
+%h1 Calculation result #{ link_to 'Back', url_for(:back), class: 'btn btn-success', style: 'float:right'}
+
+.row
+  .col-sm-4
+    %table.table.table-bordered.stock-table
+      %tr
+        %th Name
+        %td= @stock.name
+      %tr
+        %th Price
+        %td= @stock.price
+      %tr
+        %th Quantity
+        %td= @stock.quantity
+      %tr
+        %th Percentage
+        %td= @stock.percentage
+      %tr
+        %th Years
+        %td= @stock.years
+
+    %br
+
+    %table.table.table-bordered.table-striped.shares-table
+      %thead
+        %th Year
+        %th Value
+      %tbody
+        - @stock.shares.each do |s|
+          %tr
+            %td= s[0].to_i
+            %td= number_with_precision(s[1], precision:2)
+
+  .col-sm-8
+    #chart_container{data: {name: @stock.name, shares: @stock.shares}}
+
+
+

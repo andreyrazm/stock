@@ -1,0 +1,30 @@
+=form_for @stock do |f|
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name, autofocus: true
+  .field
+    = f.label :price
+    %br/
+    = f.text_field :price
+  .field
+    = f.label :quantity
+    %br/
+    = f.text_field :quantity
+  .field
+    = f.label :percentage
+    %br/
+    = f.text_field :percentage
+  .field
+    = f.label :years
+    %br/
+    = f.text_field :years
+  .actions
+    = f.submit "Calculate", class: 'btn btn-success'
+
+  - if @stock.errors.any?
+    .alert.alert-danger
+      %h4 There were some errors:
+      %ul
+      - @stock.errors.full_messages.each do |message|
+        %li= message

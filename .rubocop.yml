@@ -1,0 +1,17 @@
+#inherit_from: .rubocop_todo.yml
+
+Style/Encoding:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 150
+
+Documentation:
+    Enabled: false
+
+AllCops:
+  Exclude:
+    - db/**
+    - bin/**
+    - lib/**
+
