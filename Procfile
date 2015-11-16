@@ -1,0 +1,1 @@
+web: bundle exec depl -C config/depl.rb
